@@ -1,0 +1,5 @@
+com\martin\downloadmanager\AppController.class
+com\martin\downloadmanager\DownloadTask.class
+com\martin\downloadmanager\util\R.class
+com\martin\downloadmanager\App.class
+com\martin\downloadmanager\DownloadController.class
