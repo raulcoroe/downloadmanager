@@ -4,12 +4,13 @@ import com.martin.downloadmanager.util.R;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.List;
@@ -26,6 +27,7 @@ public class AppController {
     public static int countDownloads;
     public static ExecutorService executor;
     public boolean interruptor;
+    public Label lbRegister;
 
     private Map<String, DownloadController> allDownloads;
 
@@ -36,11 +38,11 @@ public class AppController {
 
     @FXML
     public void download(ActionEvent event) {
-            instanceExecute();
-            String urlText = tfUrl.getText();
-            tfUrl.clear();
-            tfUrl.requestFocus();
-            download(urlText);
+        instanceExecute();
+        String urlText = tfUrl.getText();
+        tfUrl.clear();
+        tfUrl.requestFocus();
+        download(urlText);
     }
 
     private void download(String url) {
@@ -76,7 +78,7 @@ public class AppController {
     public void readDLC() {
         instanceExecute();
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setContentText("Quieres leer el DLC?");
+        alert.setContentText("Do you want to read DLC?");
         alert.showAndWait();
         ButtonType result = alert.getResult();
         if (result == ButtonType.OK) {
@@ -91,7 +93,7 @@ public class AppController {
         }
     }
 
-    public void instanceExecute(){
+    public void instanceExecute() {
         if (tfMaxNumber.getText().equals("")) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setContentText("Select the max number of downloads");
@@ -101,5 +103,46 @@ public class AppController {
             executor = Executors.newFixedThreadPool(Integer.parseInt(tfMaxNumber.getText()));
             interruptor = true;
         }
+    }
+
+    public String readFile() {
+        String texto = "";
+        try {
+            BufferedReader bf = new BufferedReader(new FileReader("C:\\Users\\r_mar\\IdeaProjects\\downladmanager\\downloadmanager.log"));
+            String temp = "";
+            String bfRead;
+            while ((bfRead = bf.readLine()) != null) {
+                temp = temp + bfRead;
+            }
+            texto = temp;
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return texto;
+
+    }
+
+    public void registro() {
+
+        try {
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(R.getUI("registro.fxml"));
+            lbRegister = loader.load();
+
+            Scene scene = new Scene(lbRegister);
+            stage.setScene(scene);
+            stage.setTitle("Registro");
+            stage.show();
+            lbRegister.setText(readFile());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 }

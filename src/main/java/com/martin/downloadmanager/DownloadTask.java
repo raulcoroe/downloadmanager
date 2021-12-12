@@ -18,7 +18,7 @@ public class DownloadTask extends Task<Integer> {
     private long seconds;
     private long speed;
 
-    private static final Logger logger = LogManager.getLogger(DownloadController.class);
+    private static final Logger logger = LogManager.getLogger(DownloadTask.class);
 
     public DownloadTask(String urlText, File file) throws MalformedURLException {
         this.url = new URL(urlText);
@@ -28,8 +28,8 @@ public class DownloadTask extends Task<Integer> {
     @Override
     protected Integer call() throws Exception {
         long incio = System.currentTimeMillis();
-        logger.trace("Descarga " + url.toString() + " iniciada");
-        updateMessage("Conectando con el servidor . . .");
+        logger.trace("Download " + url.toString() + " has started");
+        updateMessage("Connecting with the server . . .");
 
         URLConnection urlConnection = url.openConnection();
         double fileSize = urlConnection.getContentLength();
@@ -61,7 +61,7 @@ public class DownloadTask extends Task<Integer> {
 
             if (isCancelled()) {
                 fileOutputStream.close();
-                logger.trace("Descarga " + url.toString() + " cancelada");
+                logger.trace("Download " + url.toString() + " canceled");
                 return null;
             }
         }
@@ -69,7 +69,7 @@ public class DownloadTask extends Task<Integer> {
         updateProgress(1, 1);
         updateMessage("100 %");
         fileOutputStream.close();
-        logger.trace("Descarga " + url.toString() + " finalizada");
+        logger.trace("Download " + url.toString() + " finished");
         return null;
     }
 }

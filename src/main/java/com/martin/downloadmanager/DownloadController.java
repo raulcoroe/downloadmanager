@@ -35,9 +35,10 @@ public class DownloadController implements Initializable {
     private static final Logger logger = LogManager.getLogger(DownloadController.class);
     public Timer timer;
     public TimerTask timerTask;
+    public boolean pauseBoolean = false;
 
     public DownloadController(String urlText, ExecutorService executor) {
-        logger.info("Descarga " + urlText + " creada");
+        logger.info("Download " + urlText + " is created");
         this.urlText = urlText;
         this.executor = executor;
     }
@@ -70,12 +71,12 @@ public class DownloadController implements Initializable {
                 System.out.println(observableValue.toString());
                 if (newState == Worker.State.SUCCEEDED) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setContentText("La descarga ha terminado");
+                    alert.setContentText("Download has finished");
                     alert.show();
                 }
                 if (newState == Worker.State.CANCELLED) {
                     Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setContentText("La descarga se ha cancelado");
+                    alert.setContentText("Download has canceled");
                     alert.show();
                 }
             });
@@ -83,9 +84,10 @@ public class DownloadController implements Initializable {
             downloadTask.messageProperty().addListener((observableValue, oldValue, newValue) -> lbStatus.setText(newValue));
             executor.execute(downloadTask);
 
+
         } catch (MalformedURLException murle) {
             murle.printStackTrace();
-            logger.error("URL mal formada", murle.fillInStackTrace());
+            logger.error("URL not found", murle.fillInStackTrace());
         }
     }
 
@@ -98,7 +100,7 @@ public class DownloadController implements Initializable {
         if (downloadTask != null) {
             downloadTask.cancel();
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setContentText("Quieres borrar el fichero?");
+            alert.setContentText("Do you want to delete the file?");
             alert.showAndWait();
             ButtonType result = alert.getResult();
             if (result == ButtonType.OK) {
@@ -125,9 +127,8 @@ public class DownloadController implements Initializable {
     public void delete() {
         if (file != null) {
             file.delete();
-        } else {
-
         }
+        logger.info("File " + urlText + " is deleted");
     }
 }
 

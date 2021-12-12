@@ -50,6 +50,7 @@
             <Button id="btDownload" fx:id="btDownload" mnemonicParsing="false" onAction="#download" text="Add download" />
             <Button mnemonicParsing="false" onAction="#stopAllDownloads" text="Stop all downloads" />
             <Button fx:id="btReadDlc" mnemonicParsing="false" onAction="#readDLC" text="Read DLC" />
+            <Button fx:id="btRegistro" mnemonicParsing="false" onAction="#registro" text="Register" />
          </children>
       </HBox>
    </bottom>
