@@ -1,13 +1,12 @@
 package com.martin.downloadmanager;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Worker;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.ProgressBar;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.FileChooser;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,7 +14,11 @@ import org.apache.logging.log4j.Logger;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.ExecutorService;
 
 public class DownloadController implements Initializable {
 
@@ -27,12 +30,16 @@ public class DownloadController implements Initializable {
     private DownloadTask downloadTask;
     private String urlFinal;
     private File file;
-
+    private ExecutorService executor;
+    private boolean suspender = false;
     private static final Logger logger = LogManager.getLogger(DownloadController.class);
+    public Timer timer;
+    public TimerTask timerTask;
 
-    public DownloadController(String urlText) {
+    public DownloadController(String urlText, ExecutorService executor) {
         logger.info("Descarga " + urlText + " creada");
         this.urlText = urlText;
+        this.executor = executor;
     }
 
     @Override
@@ -74,7 +81,8 @@ public class DownloadController implements Initializable {
             });
 
             downloadTask.messageProperty().addListener((observableValue, oldValue, newValue) -> lbStatus.setText(newValue));
-            new Thread(downloadTask).start();
+            executor.execute(downloadTask);
+
         } catch (MalformedURLException murle) {
             murle.printStackTrace();
             logger.error("URL mal formada", murle.fillInStackTrace());
@@ -89,6 +97,19 @@ public class DownloadController implements Initializable {
     public void stop() {
         if (downloadTask != null) {
             downloadTask.cancel();
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setContentText("Quieres borrar el fichero?");
+            alert.showAndWait();
+            ButtonType result = alert.getResult();
+            if (result == ButtonType.OK) {
+                delete();
+            }
+        }
+    }
+
+    public void close() {
+        if (downloadTask != null) {
+            downloadTask.cancel();
         }
     }
 
@@ -101,5 +122,12 @@ public class DownloadController implements Initializable {
         }
     }
 
+    public void delete() {
+        if (file != null) {
+            file.delete();
+        } else {
+
+        }
+    }
 }
 

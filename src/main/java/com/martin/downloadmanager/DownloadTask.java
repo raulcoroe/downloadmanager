@@ -1,6 +1,5 @@
 package com.martin.downloadmanager;
 
-import com.martin.downloadmanager.DownloadController;
 import javafx.concurrent.Task;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,6 +15,8 @@ public class DownloadTask extends Task<Integer> {
 
     private URL url;
     private File file;
+    private long seconds;
+    private long speed;
 
     private static final Logger logger = LogManager.getLogger(DownloadController.class);
 
@@ -26,6 +27,7 @@ public class DownloadTask extends Task<Integer> {
 
     @Override
     protected Integer call() throws Exception {
+        long incio = System.currentTimeMillis();
         logger.trace("Descarga " + url.toString() + " iniciada");
         updateMessage("Conectando con el servidor . . .");
 
@@ -41,12 +43,24 @@ public class DownloadTask extends Task<Integer> {
         while ((bytesRead = in.read(dataBuffer, 0, 1024)) != -1) {
             downloadProgress = (double) (totalRead / fileSize);
             updateProgress(downloadProgress, 1);
-            updateMessage(downloadProgress * 100 + " %   --   " + totalRead/1024 + " mbytes");
+            int totalReadMb = (int) Math.round(totalRead/(Math.pow(1024, 2)));
+            if (seconds != 0){
+                speed = (long) (totalRead/(Math.pow(1024, 2))/seconds);
+            } else{
+                speed = 0;
+            }
 
+            updateMessage(downloadProgress * 100 + " %   --   "
+                    + totalReadMb + " mbytes --  "
+                    + speed + " MB/s "
+                    );
+
+            seconds = (System.currentTimeMillis() - incio) / 1000;
             fileOutputStream.write(dataBuffer, 0, bytesRead);
             totalRead += bytesRead;
 
             if (isCancelled()) {
+                fileOutputStream.close();
                 logger.trace("Descarga " + url.toString() + " cancelada");
                 return null;
             }
@@ -54,7 +68,7 @@ public class DownloadTask extends Task<Integer> {
 
         updateProgress(1, 1);
         updateMessage("100 %");
-
+        fileOutputStream.close();
         logger.trace("Descarga " + url.toString() + " finalizada");
         return null;
     }
