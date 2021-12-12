@@ -7,7 +7,7 @@
 ### - RUTA DESCARGA
 #### Se puede configurar la ruta de descarga desde la propia aplicación.
 ### - LOG
-#### Se mantiene un historial de todos los ficheros descargados por la aplicación y las descargas fallidas/canceladas.
+#### Se mantiene un historial de todos los ficheros descargados por la aplicación y las descargas fallidas/canceladas y se muestra en la interfaz.
 ### - PROGRAMAR DESCARGAS
 #### La aplicación permite programar las descargas para un momento determinado
 ### - ENCOLAR DESCARGAS
