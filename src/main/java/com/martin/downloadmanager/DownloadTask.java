@@ -1,6 +1,9 @@
 package com.martin.downloadmanager;
 
 import javafx.concurrent.Task;
+import javafx.concurrent.Worker;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,6 +13,7 @@ import java.io.FileOutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.TimerTask;
 
 public class DownloadTask extends Task<Integer> {
 
@@ -17,6 +21,7 @@ public class DownloadTask extends Task<Integer> {
     private File file;
     private long seconds;
     private long speed;
+    private boolean paused;
 
     private static final Logger logger = LogManager.getLogger(DownloadTask.class);
 
@@ -26,7 +31,7 @@ public class DownloadTask extends Task<Integer> {
     }
 
     @Override
-    protected Integer call() throws Exception {
+    protected synchronized Integer call() throws Exception {
         long incio = System.currentTimeMillis();
         logger.trace("Download " + url.toString() + " has started");
         updateMessage("Connecting with the server . . .");
@@ -41,6 +46,16 @@ public class DownloadTask extends Task<Integer> {
         double downloadProgress = 0;
 
         while ((bytesRead = in.read(dataBuffer, 0, 1024)) != -1) {
+
+            while (paused){
+                try {
+                    wait(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            notifyAll();
+
             downloadProgress = (double) (totalRead / fileSize);
             updateProgress(downloadProgress, 1);
             int totalReadMb = (int) Math.round(totalRead/(Math.pow(1024, 2)));
@@ -72,4 +87,9 @@ public class DownloadTask extends Task<Integer> {
         logger.trace("Download " + url.toString() + " finished");
         return null;
     }
+
+    public void interruptor (boolean paused){
+        this.paused = paused;
+    }
+
 }

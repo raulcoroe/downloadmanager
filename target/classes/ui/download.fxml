@@ -9,11 +9,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane id="borderPane" prefHeight="246.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane id="borderPane" prefHeight="342.0" prefWidth="535.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <bottom>
-      <HBox alignment="CENTER" prefHeight="83.0" prefWidth="485.0" spacing="30.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="83.0" prefWidth="453.0" spacing="30.0" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="setTime" prefHeight="27.0" prefWidth="193.0" promptText="Program the start of the download" />
+            <Button fx:id="btPause" mnemonicParsing="false" onAction="#pause" text="Pause" />
+            <Button fx:id="btReload" mnemonicParsing="false" onAction="#reload" text="Reload" />
             <Button id="btStart" fx:id="btStart" mnemonicParsing="false" onAction="#start" onMouseClicked="#start" text="Start" />
             <Button id="btStop" fx:id="btStop" mnemonicParsing="false" onAction="#stop" onMouseClicked="#stop" text="Stop" />
          </children>

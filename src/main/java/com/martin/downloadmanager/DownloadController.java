@@ -52,7 +52,6 @@ public class DownloadController implements Initializable {
     public void start(ActionEvent event) {
         try {
             FileChooser fileChooser = new FileChooser();
-            urlFinal = String.valueOf(tfUrl.getScene().getWindow());
             file = fileChooser.showSaveDialog(tfUrl.getScene().getWindow());
             if (file == null)
                 return;
@@ -94,6 +93,16 @@ public class DownloadController implements Initializable {
     @FXML
     public void stop(ActionEvent event) {
         stop();
+    }
+
+    @FXML
+    public void pause (ActionEvent actionEvent)  {
+        downloadTask.interruptor(true);
+    }
+
+    @FXML
+    public void reload (ActionEvent actionEvent) {
+        downloadTask.interruptor(false);
     }
 
     public void stop() {

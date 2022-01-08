@@ -14,3 +14,5 @@
 #### Permite seleccionar cuantas descargas simultáneas se pueden llevar a cabo y el resto las encolará.
 ### - ELIMINAR FICHERO
 #### Al cancelar la descarga se permite eliminar el fichero que se está descargando.
+### - PAUSAR Y REANUDAR DESCARGA
+#### Se permite pausar y reanudar las descargas

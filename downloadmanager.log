@@ -1,3 +1,114 @@
 13:16:10.355 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Descarga https://speed.hetzner.de/1GB.bin creada
 13:16:16.434 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Descarga https://speed.hetzner.de/1GB.bin iniciada
 13:16:20.869 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Descarga https://speed.hetzner.de/1GB.bin cancelada
+14:30:20.614 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+14:30:25.286 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+14:30:53.996 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin finished
+14:31:48.657 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+16:22:03.465 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+16:22:10.271 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+16:22:33.343 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+16:22:51.578 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin finished
+16:22:51.579 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+16:22:55.151 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin canceled
+16:22:57.557 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+21:58:06.019 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+21:58:44.425 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+21:59:50.889 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:01:19.428 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:01:23.062 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:01:31.393 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:01:31.399 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:01:31.410 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:01:45.255 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:05:55.117 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:06:21.161 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:06:29.179 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+22:06:52.924 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin canceled
+22:06:54.068 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+22:09:09.545 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:09:13.631 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:09:57.438 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:10:13.949 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:10:22.549 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+22:10:36.073 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+22:10:41.160 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+22:18:53.459 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:19:00.693 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+22:19:10.685 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin canceled
+22:19:11.885 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+22:24:37.335 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:24:44.479 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+22:24:51.137 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin canceled
+22:24:52.252 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+22:27:31.035 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:27:40.304 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+22:29:44.845 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:29:52.324 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+22:42:28.520 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:43:36.274 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:43:44.507 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+22:44:01.798 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin canceled
+22:44:02.793 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+22:46:27.551 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:46:34.931 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+22:54:14.852 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:54:21.605 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+22:54:30.351 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin canceled
+22:54:31.410 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+22:55:09.651 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+22:55:15.733 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+22:56:22.838 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin finished
+00:59:07.414 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+00:59:15.630 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+00:59:38.566 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+00:59:45.066 [pool-2-thread-2] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+00:59:51.994 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+01:01:00.862 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download  is created
+01:01:04.819 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:01:14.538 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+01:01:31.571 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:01:39.674 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+01:02:14.563 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+01:02:17.862 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+01:08:22.390 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:08:28.407 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+01:08:58.804 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin canceled
+01:09:00.145 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+01:11:11.073 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:11:18.080 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+01:11:22.761 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:11:31.602 [pool-2-thread-2] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+01:12:04.014 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:12:24.881 [pool-2-thread-2] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin canceled
+01:12:24.881 [pool-2-thread-2] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+01:12:55.881 [pool-2-thread-2] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin canceled
+01:12:56.738 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+01:13:00.269 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+01:13:02.537 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin canceled
+01:13:03.363 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+01:15:03.407 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:15:09.468 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+01:17:01.881 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:18:17.934 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+01:21:56.448 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:22:05.271 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+01:22:23.799 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin canceled
+01:22:24.677 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - File https://speed.hetzner.de/1GB.bin is deleted
+01:26:27.976 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:26:33.324 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+01:29:10.300 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:29:15.498 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+01:29:22.407 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin canceled
+01:29:40.984 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:29:47.111 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+01:31:46.521 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:31:52.292 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+01:32:17.063 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:32:24.509 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+01:40:19.414 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:40:28.336 [pool-2-thread-1] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
+01:41:20.763 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:41:20.773 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:41:20.783 [JavaFX Application Thread] INFO  com.martin.downloadmanager.DownloadController - Download https://speed.hetzner.de/1GB.bin is created
+01:41:39.055 [pool-2-thread-2] TRACE com.martin.downloadmanager.DownloadTask - Download https://speed.hetzner.de/1GB.bin has started
